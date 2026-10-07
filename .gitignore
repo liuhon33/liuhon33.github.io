@@ -1,0 +1,31 @@
+# Local dependencies and generated site output
+node_modules/
+dist/
+build/
+_site/
+.cache/
+.next/
+.astro/
+.jekyll-cache/
+.sass-cache/
+
+# Secrets and local settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+Thumbs.db
+*.log
+
+# Private inputs do not belong in this public website repository
+private/
+materials/
+revision_page.pdf
+*thesis*.pdf
+*thesis*.docx
+*intent*.docx
+*reference*.docx
+Academic History*
+# Ignore rules are guardrails, not a substitute for reviewing staged files.
