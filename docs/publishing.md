@@ -1,33 +1,25 @@
-# GitHub Pages publishing plan
+# GitHub Pages publication
 
-Selected account: `liuhon33`.
-Intended repository: `liuhon33/liuhon33.github.io`.
-Intended origin: `https://github.com/liuhon33/liuhon33.github.io.git`.
-Eventual website: `https://liuhon33.github.io/`.
-Local folder: `personal_website`.
+Target: `liuhon33/liuhon33.github.io`, serving https://liuhon33.github.io/.
 
-The user selected this account on October 7, 2026. The original spelling `hongrui_liu_uoft.github.io` is not the target: GitHub usernames cannot contain underscores, and a user-site repository must match its owner's username. See [GitHub username requirements](https://github.com/signup) and [GitHub Pages quickstart](https://docs.github.com/en/pages/quickstart).
+## Prepared version
 
-## Current state
+The approved single-page portfolio has been checked in a real browser. Hongrui authorized publication of this version on October 8, 2026. Its source files are served directly, without a framework build. `node scripts/prepare-publish.mjs` creates a `dist/` folder containing only the approved public files when an artifact is needed.
 
-A separate local repository is initialized on `main`, with documentation and ignore/line-ending rules tracked. Its remote URL is configured for the selected account. The local folder need not be renamed to the remote repository name.
+The private thesis PDF, complete thesis pages, private application documents, and internal source notes are not website assets. Only the selected original research figures, poster display export, supplied poster PowerPoint, and updated public CV are included.
 
-No remote repository has been created by this setup, no commits have been pushed, and Pages has not been enabled. A network check could not establish whether the remote already exists. No site is live as a result of this work.
+## Repository state to preserve
 
-## Connect the remote when ready
+Both the local publishing branch and remote default branch are `master`. Before the initial portfolio release, the remote root contained the original planning README, publishing document, and Git configuration files, with no existing application framework.
 
-1. Check whether `liuhon33/liuhon33.github.io` already exists. If it does, inspect its history and contents before integrating this local repository. Do not overwrite an existing site or force-push.
-2. If absent, create an empty repository named exactly `liuhon33.github.io` under `liuhon33`. GitHub Free supports Pages from public repositories. Do not initialize another README remotely because this local repository already has one.
-3. From this folder, verify `git remote -v` and `git status`. For a confirmed empty remote, `git push -u origin main` uploads the tracked history. Review the file list first; the application repository is never part of this push.
+GitHub Pages settings were verified on October 8, 2026: branch-based publishing from `master`, folder `/`. A push to this branch triggers the existing Pages build and deployment workflow. For future updates, fetch and re-check the remote history and integrate reviewed changes without force-pushing or replacing unrelated commits.
 
-## Build and publish after content review
+## Publish the reviewed version
 
-Implement the reviewed portfolio in this repository. Select a framework only when needed; GitHub Pages serves static output. Keep private application sources outside the build inputs and published output.
+1. Prepare and review the local website and downloadable CV. Publication of the initial version was explicitly authorized by Hongrui.
+2. Inspect remote changes and current Pages settings.
+3. Commit the reviewed website files to the appropriate branch. Keep the application-materials repository separate.
+4. Retain the configured branch-based Pages source: `master`, repository root, containing `index.html` and `.nojekyll`. For any future artifact deployment, use only the prepared `dist/` folder.
+5. Verify the GitHub Pages deployment, HTTPS address, navigation, expandable projects, figure viewer, and CV/poster downloads on the public site.
 
-Choose the publishing method after the implementation is known: a branch/folder for a simple static site, or a GitHub Actions build that publishes only the generated site output. Do not point Pages at JobApplication or enable deployment merely to publish this planning README.
-
-When the site is ready, enable Pages in the GitHub repository settings, verify the deployment and HTTPS address, and check navigation, images, CV/poster links and mobile display. Missing project destinations should remain hidden or plain text. No thesis download, source path, raw text or figure may appear in the deployed files or repository history.
-
-## Separate Git histories
-
-Run Git in the folder you intend to change. JobApplication remains the application/drafting repository; personal_website is the website repository. They are not nested repositories, submodules or worktrees of each other. The website build must work from its own checkout without access to application records.
+Keep a record of the deployed commit so the reviewed version can be identified or restored later.

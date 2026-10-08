@@ -1,35 +1,41 @@
-# Hongrui Liu personal website
+# Hongrui Liu — portfolio
 
-This is the website repository for the planned portfolio at `https://liuhon33.github.io/`. The local folder name is `personal_website`; the intended GitHub repository name is `liuhon33.github.io`, owned by `liuhon33`.
+A single-page portfolio for research and data recruiters, prepared for GitHub Pages at https://liuhon33.github.io/.
 
-## Relationship to JobApplication
+The site uses plain HTML, CSS, and a small amount of JavaScript. It has no build-time dependencies, external fonts, tracking scripts, or backend. Project disclosures work without JavaScript; JavaScript adds mobile-menu controls, figure previews, and direct links into expanded projects.
 
-This folder and `../JobApplication/` are sibling repositories with independent Git histories:
+## Preview
 
-- `JobApplication` (`liuhon33/JobApp`): CV and application records, source materials, content drafts, portfolio plan, checklist and media inventory.
-- `personal_website` (`liuhon33/liuhon33.github.io`): website implementation and selected public content, once reviewed.
+From this folder:
 
-The existing outline retains six sections: Home; Research and technical projects; Professional experience; Education, awards and skills; Leadership and community involvement; CV and contact. The proposed site has an overview plus individual project pages. No framework has been selected and no website components are created yet.
+```powershell
+python -m http.server 4173 --bind 127.0.0.1
+```
 
-For local editorial work, consult these paths relative to this folder:
+Open http://127.0.0.1:4173/. The server stays local to this computer.
 
-- `../JobApplication/docs/portfolio-outline.md`
-- `../JobApplication/docs/content-checklist.md`
-- `../JobApplication/docs/media-manifest.md`
-- `../JobApplication/content/projects/graduate-research/summary.md`
+## Files
 
-These are local companion paths, not public website URLs or runtime dependencies. Do not import the sibling directory in a website build.
+- `index.html`: introduction, three projects, experience, community, skills, education, and contact.
+- `styles.css`: responsive layout, colour palette, accessibility, print styles, and optional experience-photo styling.
+- `script.js`: navigation, project deep links, figure dialog, and print expansion.
+- `assets/research/`: the approved research poster display export and original figure excerpts.
+- `assets/downloads/`: the updated public CV and supplied poster PowerPoint.
+- `scripts/prepare-publish.mjs`: prepares an explicit list of public files in `dist/`.
+- `.nojekyll`: enables direct static-file serving for branch-based GitHub Pages publishing.
 
-## Content workflow
+## Content maintenance
 
-Complete and review activity drafts in JobApplication first. During implementation, bring over only the website paragraphs and approved media needed for publication. Leave editorial notes, source paths, checklists, letters, references, academic records and research inputs in the application workspace. Record public copies and destinations in the JobApplication media manifest; avoid multiple copies within this website repository.
+Three featured projects: ML-LAMP graduate research, Saturday Program matching, and computational neuroscience coursework. CDiA is deferred from the first version. Professional and community entries are text-only and can gain photos later without a structural redesign. Add a `figure.experience-media` containing a supplied image, descriptive alt text, and an optional caption within an experience entry when a photograph is ready.
 
-The research poster is authorized for public use. Its supplied PowerPoint and original poster image currently remain in JobApplication's `media/graduate-research/posters/` folder. No assets have been copied here during Git setup.
+Use the native `details` and `summary` structure for project expansions. For a new research image, give its link a real image destination, `data-lightbox`, a concise `data-title`, a contextual `data-caption`, and an image with meaningful alt text. Links continue to work when scripting is unavailable.
 
-The thesis is private and must remain outside this repository. Only original summary prose is authorized. Do not upload the thesis, extracted pages, figures or raw text, and do not create a thesis download or link. An approved CV will be selected separately.
+Preserve original figure labels, axes, and uncertainty. The public figures are 4.6, 4.9, and 5.1 from Hongrui Liu's 2026 MSc research. The poster is a separate analysis version; do not combine its sample counts with those of the figures. The complete thesis is not a public asset.
 
-## Git and publication status
+## Prepare publication
 
-Local Git uses branch `main` and a separate history. `origin` points to the intended GitHub repository. Configuring a remote URL does not create the GitHub repository, push files or enable Pages. Remote existence has not been verified because the initial network check could not connect.
+```powershell
+node scripts/prepare-publish.mjs
+```
 
-This setup tracks repository documentation and Git configuration files only. No site, framework, dependencies, deployment workflow or Pages configuration has been added. See `docs/publishing.md` for the later connection and publication steps.
+This copies only the explicit public-file list into `dist/`. The site can also be served directly from this repository's root. See `docs/publishing.md` for the current branch information and review steps. Preparing files does not publish them.
