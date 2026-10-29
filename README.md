@@ -41,6 +41,8 @@ For a new research image, give its link a real image destination, `data-lightbox
 
 Preserve original figure labels, axes, and uncertainty. The public figures are 4.6, 4.9, and 5.1 from Hongrui Liu's 2026 MSc research. The poster is a separate analysis version; do not combine its sample counts with those of the figures. The complete thesis is not a public asset.
 
+The current poster download is the unchanged `SOBP_poster_v2.pptx` supplied on October 29, 2026. Its display image is a complete 4000 × 2265 PNG export from PowerPoint. The poster links include a version query so returning visitors load the updated assets.
+
 ## Prepare publication
 
 ```powershell
