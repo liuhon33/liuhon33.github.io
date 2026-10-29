@@ -6,6 +6,10 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const output = join(root, 'dist');
 const files = [
   'index.html', 'styles.css', 'script.js', '.nojekyll', 'assets/favicon.svg',
+  'projects/ml-lamp/index.html', 'projects/saturday-matching/index.html',
+  'projects/neural-simulation/index.html', 'projects/deep-learning-lab/index.html',
+  'assets/deep-learning/resnet-features-and-predictions.png',
+  'assets/deep-learning/resnet-loss-and-gradients.png',
   'assets/research/model-validation.png', 'assets/research/pc1-shap.png',
   'assets/research/prediction-and-association.png', 'assets/research/ml-lamp-poster.png',
   'assets/downloads/Hongrui-Liu-CV.pdf', 'assets/downloads/Hongrui-Liu-ML-LAMP-Poster.pptx',

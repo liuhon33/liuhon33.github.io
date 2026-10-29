@@ -2,11 +2,17 @@
 
 Target: `liuhon33/liuhon33.github.io`, serving https://liuhon33.github.io/.
 
-## Prepared version
+## Initial release
 
 The approved single-page portfolio has been checked in a real browser. Hongrui authorized publication of this version on October 8, 2026. Its source files are served directly, without a framework build. `node scripts/prepare-publish.mjs` creates a `dist/` folder containing only the approved public files when an artifact is needed.
 
-The private thesis PDF, complete thesis pages, private application documents, and internal source notes are not website assets. Only the selected original research figures, poster display export, supplied poster PowerPoint, and updated public CV are included.
+## October 29 update
+
+The portfolio now presents four stacked project rows. Expand reveals an inline overview; Explore more opens a dedicated page in a new browser tab. The detail URLs are `/projects/ml-lamp/`, `/projects/saturday-matching/`, `/projects/neural-simulation/`, and `/projects/deep-learning-lab/`. The first three retain their existing narratives. Deep Learning Lab keeps its introduction above an expandable ResNet Learner entry, with two original visualizer screenshots and a launch link.
+
+Local Chrome checks covered the four expand/collapse controls, new-tab navigation, keyboard activation, existing project anchors, the research figure viewer, mobile navigation, and layouts from 320 to 1440 pixels wide. Local links and asset paths were checked, and the existing three narratives were compared with the initial release. The revised ResNet entry and both screenshot viewers passed separate interaction and responsive checks. Hongrui reviewed the local version and explicitly authorized its publication on October 29, 2026. Pages settings were rechecked before publication: `master`, repository root, HTTPS enforced.
+
+The private thesis PDF, complete thesis pages, private application documents, and internal source notes are not website assets. Only the selected original research figures, poster display export, supplied poster PowerPoint, updated public CV, and two ResNet visualizer screenshots are included.
 
 ## Repository state to preserve
 

@@ -40,7 +40,7 @@ window.addEventListener('hashchange', openLinkedProject);
 const dialog = document.getElementById('figure-dialog');
 const dialogImage = document.getElementById('dialog-image');
 let figureOpener = null;
-if (typeof dialog.showModal === 'function') {
+if (dialog && typeof dialog.showModal === 'function') {
   document.querySelectorAll('[data-lightbox]').forEach((link) => {
     link.addEventListener('click', (event) => {
       if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
@@ -68,8 +68,11 @@ if (typeof dialog.showModal === 'function') {
   });
 }
 
-const navLinks = Array.from(document.querySelectorAll('.desktop-nav a'));
-const navSections = navLinks.map((link) => document.querySelector(link.getAttribute('href')));
+const navLinks = Array.from(document.querySelectorAll('.desktop-nav a')).filter((link) => {
+  const href = link.getAttribute('href');
+  return href.startsWith('#') && document.getElementById(href.slice(1));
+});
+const navSections = navLinks.map((link) => document.getElementById(link.getAttribute('href').slice(1)));
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver(() => {
     const current = navSections.filter((section) => section.getBoundingClientRect().top <= 160).at(-1);
@@ -83,7 +86,7 @@ if ('IntersectionObserver' in window) {
 
 let printState = [];
 window.addEventListener('beforeprint', () => {
-  printState = Array.from(document.querySelectorAll('.project-details'), (element) => [element, element.open]);
+  printState = Array.from(document.querySelectorAll('.project-disclosure'), (element) => [element, element.open]);
   printState.forEach(([element]) => { element.open = true; });
 });
 window.addEventListener('afterprint', () => printState.forEach(([element, open]) => { element.open = open; }));

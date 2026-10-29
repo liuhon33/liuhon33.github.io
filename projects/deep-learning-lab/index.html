@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interactive experiments on how neural networks learn, starting with residual connections.">
+  <meta name="theme-color" content="#f6f7f2">
+  <meta property="og:title" content="Deep Learning Lab — Hongrui Liu">
+  <meta property="og:description" content="Interactive experiments on how neural networks learn, starting with residual connections.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://liuhon33.github.io/projects/deep-learning-lab/">
+  <link rel="canonical" href="https://liuhon33.github.io/projects/deep-learning-lab/">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../styles.css">
+  <script src="../../script.js" defer></script>
+  <title>Deep Learning Lab — Hongrui Liu</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="header-inner container">
+    <a class="wordmark" href="../../#home" aria-label="Hongrui Liu, back to introduction"><span class="monogram" aria-hidden="true">hl.</span><span>Hongrui Liu</span></a>
+    <nav class="desktop-nav" aria-label="Main navigation"><a href="../../#projects">Projects</a><a href="../../#experience">Experience</a><a href="../../#community">Community</a><a href="../../#skills">Skills</a><a href="../../#education">Education</a></nav>
+    <a class="header-contact" href="../../#contact">Let’s connect <span aria-hidden="true">↗</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">Menu <span aria-hidden="true">☰</span></button>
+  </div><nav class="mobile-nav container" id="mobile-nav" aria-label="Mobile navigation"><a href="../../#projects">Projects</a><a href="../../#experience">Experience</a><a href="../../#community">Community</a><a href="../../#skills">Skills</a><a href="../../#education">Education</a><a href="../../#contact">CV &amp; contact</a></nav></header>
+  <main id="main" class="container project-page">
+    <div class="project-page-navigation"><a class="text-link" href="../../#deep-learning-project"><span aria-hidden="true">←</span> Back to selected work</a><span class="mini-label">04 / Independent study</span></div>
+    <article class="project">
+      <div class="project-overview">
+  <div class="project-index" aria-hidden="true">04</div>
+  <div class="project-copy"><p class="mini-label">Independent study · Interactive learning</p><h1 class="project-page-title">Deep Learning Lab.</h1><p>I build visual experiments to connect neural-network equations with the behaviour of features, gradients, and predictions. The first lab compares plain and residual networks as they learn the same function.</p><ul class="tags" aria-label="Project methods"><li>JavaScript</li><li>Neural networks</li><li>Data visualization</li><li>Experiment design</li></ul></div>
+  <div class="project-takeaway"><span class="mini-label">What this work demonstrates</span><p>Turning abstract learning mechanisms into experiments you can pause, inspect, and change.</p><div class="cohort-flow" aria-label="Learning workflow: ask a question, inspect a model, test an idea"><span>Ask<br><b>A clear question</b></span><span class="flow-arrow" aria-hidden="true">→</span><span>Inspect &amp; test<br><b>A visible mechanism</b></span></div></div>
+</div>
+      <div class="details-content lab-content">
+  <div class="detail-grid">
+    <div><p class="mini-label">The motivation</p><h2>From an equation to something I can investigate.</h2><p>I wanted to understand what happens inside a network while it learns: how inputs become features, how a prediction changes, and how learning signals travel backward. Building an interactive lab lets me connect those questions to a model I can inspect.</p></div>
+    <div><p class="mini-label">The approach</p><h2>One model state. Several connected views.</h2><p>Each experiment links the input, internal representations, predictions, loss, and gradients. I can pause training, follow the same input through the network, and change one factor to see what happens.</p></div>
+  </div>
+  <section class="lab-collection" aria-labelledby="labs-title">
+    <h2 id="labs-title">Explore the labs.</h2>
+    <ol class="lab-list">
+      <li class="project">
+        <details class="project-disclosure" id="resnet-learner">
+          <summary class="project-summary"><span class="project-row-index" aria-hidden="true">01</span><span class="project-row-copy"><span class="project-row-title">ResNet Learner.</span><span class="project-row-description">Watch plain and residual networks learn, and explore what changes inside.</span></span><span class="project-toggle"><span class="expand-label">Expand</span><span class="collapse-label">Collapse</span><span class="expand-icon" aria-hidden="true"></span></span></summary>
+          <div class="project-expanded lab-study">
+            <div class="detail-grid">
+              <div><p class="mini-label">The project</p><h3>A comparison you can watch.</h3><p>Why can deeper networks become harder to train, and what does a shortcut change? This browser lab compares a plain network with a residual network learning the same landscape, making their progress visible as they train.</p></div>
+              <div><p class="mini-label">What I built</p><h3>Connected views, hands-on controls.</h3><p>I built linked feature maps, prediction surfaces, loss curves, and gradient plots. You can pause training, follow one input through the network, and inspect or change individual weights to test an idea.</p></div>
+            </div>
+            <div class="lab-gallery">
+              <figure class="research-figure"><a class="figure-image lab-feature-image" href="../../assets/deep-learning/resnet-features-and-predictions.png" data-lightbox data-title="ResNet Learner · Features and predictions" data-caption="A saved run after 500 updates: 36 hidden blocks, 10 features per layer, seed 7. The upper plots show input and hidden-feature maps; the lower plots show the target and final predictions. Blue is the plain network; orange is the residual network." aria-label="Enlarge the feature maps and prediction surfaces"><img src="../../assets/deep-learning/resnet-features-and-predictions.png" width="1272" height="1311" loading="lazy" alt="Visualizer screenshot: the plain network’s feature map is tightly compressed, while the residual network retains a spread-out grid; below, their prediction surfaces are compared with the target landscape."><span class="zoom-label" aria-hidden="true">View image ↗</span></a><figcaption><h3>From features to predictions.</h3><p>Follow how inputs are represented inside each network, then compare the landscapes they learn.</p></figcaption></figure>
+              <figure class="research-figure"><a class="figure-image" href="../../assets/deep-learning/resnet-loss-and-gradients.png" data-lightbox data-title="ResNet Learner · Loss and gradients" data-caption="Loss history and layerwise weight-gradient magnitudes after 500 updates in the same saved run. Blue is the plain network; orange is the residual network. Both vertical axes use logarithmic scales. This illustrates one experiment; outcomes depend on the settings." aria-label="Enlarge the loss curves and gradient plots"><img src="../../assets/deep-learning/resnet-loss-and-gradients.png" width="1257" height="513" loading="lazy" alt="Visualizer screenshot: the residual model’s loss falls as training progresses, while the plain model’s loss stays relatively flat; the adjacent plot shows smaller gradients in the plain model’s early layers."><span class="zoom-label" aria-hidden="true">View image ↗</span></a><figcaption><h3>See where learning changes.</h3><p>Loss curves track progress; gradients across layers reveal where the learning signal is weak or strong.</p></figcaption></figure>
+            </div>
+            <p class="lab-snapshot-note">Screenshots from one visualizer run: 36 blocks · 10 features per layer · seed 7 · 500 updates.</p>
+            <p class="lab-credit">Designed and developed by Hongrui Liu with AI coding assistance.</p>
+            <div class="lab-launch"><div><p class="mini-label">The interactive experiment</p><h3>Open Neuro Network Visualizer.</h3><p>Explore the working lab and its student guide in your browser.</p></div><a class="button button-dark" href="https://liuhon33.github.io/neuro-network-visualizer/" target="_blank" rel="noopener">Launch the visualizer <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></div>
+          </div>
+        </details>
+      </li>
+    </ol>
+  </section>
+</div>
+    </article>
+    <a class="text-link project-page-back" href="../../#projects"><span aria-hidden="true">←</span> Explore all projects</a>
+  </main>
+  <footer class="site-footer container"><a class="wordmark" href="../../#home"><span class="monogram" aria-hidden="true">hl.</span><span>Hongrui Liu</span></a><p>Research. Data. Human context.</p><a href="#main">Back to top <span aria-hidden="true">↑</span></a></footer>
+  <dialog class="figure-dialog" id="figure-dialog" aria-labelledby="dialog-title"><div class="dialog-toolbar"><h2 id="dialog-title">Lab screenshot</h2><button class="dialog-close" type="button" aria-label="Close image">Close <span aria-hidden="true">×</span></button></div><div class="dialog-image-wrap"><img id="dialog-image" alt=""></div><div class="dialog-original"><a id="dialog-original" target="_blank" rel="noopener">Open original image <span aria-hidden="true">↗</span></a></div><p id="dialog-caption"></p></dialog>
+</body>
+</html>
