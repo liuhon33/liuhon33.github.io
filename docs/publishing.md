@@ -29,3 +29,9 @@ GitHub Pages settings were verified on October 8, 2026: branch-based publishing 
 5. Verify the GitHub Pages deployment, HTTPS address, navigation, expandable projects, figure viewer, and CV/poster downloads on the public site.
 
 Keep a record of the deployed commit so the reviewed version can be identified or restored later.
+
+## November 4 blog publication
+
+Hongrui authorized adding the approved random-state article to the GitHub website and publishing it on November 4, 2026. The article lives at `/blog/random-state/`, with a blog index at `/blog/` linked from both homepage navigation menus. The article retains its approved wording, code snippets, documentation screenshot, and A/B reveal. Its share-preview image shows the seed-0 code snippet without the answer.
+
+The added public files are explicitly listed in `scripts/prepare-publish.mjs`. The publication uses the existing `master` branch and repository-root Pages deployment. The source commit in Git identifies this release; the live page and Actions deployment must be checked after the push.

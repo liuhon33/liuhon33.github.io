@@ -6,6 +6,9 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const output = join(root, 'dist');
 const files = [
   'index.html', 'styles.css', 'script.js', '.nojekyll', 'assets/favicon.svg',
+  'blog/index.html', 'blog/random-state/index.html',
+  'blog/random-state/styles.css', 'blog/random-state/app.js',
+  'blog/random-state/documentation-screenshot.png', 'blog/random-state/random-state-quiz.png',
   'projects/ml-lamp/index.html', 'projects/saturday-matching/index.html',
   'projects/neural-simulation/index.html', 'projects/deep-learning-lab/index.html',
   'assets/deep-learning/resnet-features-and-predictions.png',

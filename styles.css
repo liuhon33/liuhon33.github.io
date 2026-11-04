@@ -281,3 +281,13 @@ h1 span{display:block;font-family:Georgia,'Times New Roman',serif;font-style:ita
 @media(max-width:620px){.project-copy>p:not(.mini-label),.secondary-overview>p,.details-content p,.experience-entry>p,.community-entry>p:not(.role-title):not(.entry-date){font-size:14px}.details-content .mini-label{font-size:10px}.details-content .small-note,.details-content .attribution{font-size:10px}.research-figure figcaption p{font-size:13px}.method-steps p{font-size:13px}.figures-heading p{font-size:12px}.entry-focus{font-size:11px!important}.project-credit{font-size:12px!important}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}.button-dark:hover{transform:none}}
 @media print{body{font-size:11pt;background:white;color:black}.site-header,.hero-research,.hero-actions,.skip-link,.menu-toggle,.figure-dialog,.site-footer,.zoom-label{display:none!important}.container{width:100%}.hero,.section,.contact-section{padding-block:20px}.hero,.project-overview,.experience-layout,.experience-list,.community-grid,.skills-grid,.education-layout,.contact-layout{display:block}.foundation-strip{margin-bottom:20px}.project,.research-figure,.experience-entry,.community-entry,.education-list article{break-inside:avoid}.secondary-projects{display:block}.secondary-projects .project{margin-top:20px}.details-content{padding:15px}.contact-section{background:white;color:black}.contact-section p{color:#333}.hero-copy h1{font-size:35pt}.section-heading h2{font-size:24pt}.project-details>summary{display:none}.project-details::details-content{display:block}.project-takeaway{border:0;padding:15px 0}.contact-links small{color:#333}.skill-group+.skill-group{padding:15px 0;border:0}.figure-grid{display:block}.research-figure{margin-block:20px}.poster-block{display:none}}
+
+/* Blog index: keep article styles isolated from the portfolio. */
+.blog-index{padding-block:64px 90px;min-height:calc(100vh - 180px)}
+.blog-index h1{margin:20px 0 16px}
+.blog-intro{max-width:620px;font-size:17px}
+.blog-entry{max-width:820px;margin-top:48px;padding:32px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.blog-entry h2{font-size:32px;letter-spacing:-.8px;margin:15px 0}
+.blog-entry h2 a:hover{color:var(--accent)}
+.blog-entry>p:not(.mini-label){max-width:660px;margin-bottom:20px}
+@media(max-width:620px){.blog-index{padding-block:40px 60px}.blog-intro{font-size:15px}.blog-entry{margin-top:32px;padding-block:25px}.blog-entry h2{font-size:27px}.blog-entry>p:not(.mini-label){font-size:14px}}

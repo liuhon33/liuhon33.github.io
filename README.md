@@ -2,7 +2,7 @@
 
 A portfolio for research and data recruiters, prepared for GitHub Pages at https://liuhon33.github.io/.
 
-The site uses plain HTML, CSS, and a small amount of JavaScript. It has no build-time dependencies, external fonts, tracking scripts, or backend. Project disclosures and links work without JavaScript; JavaScript adds mobile-menu controls, figure previews, and direct links into expanded overviews.
+The portfolio uses plain HTML, CSS, and a small amount of JavaScript. It has no build-time dependencies, external fonts, tracking scripts, or backend. Project disclosures and links work without JavaScript; JavaScript adds mobile-menu controls, figure previews, and direct links into expanded overviews.
 
 ## Preview
 
@@ -24,6 +24,14 @@ Open http://127.0.0.1:4173/. The server stays local to this computer.
 - `assets/downloads/`: the updated public CV and supplied poster PowerPoint.
 - `scripts/prepare-publish.mjs`: prepares an explicit list of public files in `dist/`.
 - `.nojekyll`: enables direct static-file serving for branch-based GitHub Pages publishing.
+
+## Blog
+
+The homepage’s Blog links open `/blog/`. The first article, `/blog/random-state/`, keeps its own stylesheet and quiz script so it does not affect portfolio styling. Its A/B choice reveals the output, explanation, and direct-fit example only after a reader chooses. The estimator uses `RandomState(0)` and the CV splitter uses seed `42`.
+
+The article retains its approved wording, source screenshot, and Google Fonts stylesheet. `random-state-quiz.png` is the share-preview image and a ready-to-attach code image for X. The canonical URL and social-preview metadata point to the GitHub Pages address.
+
+Add every new blog page and asset to the explicit list in `scripts/prepare-publish.mjs`.
 
 ## Content maintenance
 
