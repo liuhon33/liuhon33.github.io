@@ -29,3 +29,6 @@ revision_page.pdf
 *reference*.docx
 Academic History*
 # Ignore rules are guardrails, not a substitute for reviewing staged files.
+
+# Local planning notes (keep out of the public Pages root)
+gemini/
