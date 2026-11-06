@@ -317,9 +317,8 @@ a,.text-link,.project-row-title,.project-explore,.desktop-nav a,.contact-links>a
 .project-list{gap:0}
 .project{background:none;border:0;border-radius:0;border-top:1px solid var(--line);overflow:visible}
 .project-featured{background:none}
-.project-summary{padding:32px 0}
-.project-summary:hover,.project-featured .project-summary:hover{background:none}
-.project-summary:hover .project-row-title{color:var(--accent)}
+.project-summary{padding:32px 20px;margin-inline:-20px;border-radius:10px;transition:background-color .2s ease}
+.project-summary:hover,.project-featured .project-summary:hover{background:#f1eee6}
 .project-summary:hover .expand-icon{border-color:var(--clay)}
 .project-expanded{border-top:0}
 .project-overview{grid-template-columns:34px 1.7fr 1fr;column-gap:24px;padding:0 0 40px}
@@ -349,7 +348,7 @@ a,.text-link,.project-row-title,.project-explore,.desktop-nav a,.contact-links>a
 
 @media(max-width:1100px){.project-overview{grid-template-columns:34px 1.4fr 1fr}}
 @media(max-width:850px){:root{--fs-h2:34px;--section-space:96px}.hero{padding-block:72px}.project-overview{grid-template-columns:34px 1fr;column-gap:18px}}
-@media(max-width:620px){:root{--fs-h1:clamp(36px,10.4vw,46px);--fs-h2:32px;--section-space:64px;--row-indent:0px}.hero{padding-block:48px 40px}.project-summary{padding:24px 0}.project-overview{display:block;padding:0 0 32px}.project-expanded .project-overview>.project-index{display:none}.project-explore{padding-bottom:28px}.contact-section{padding-block:64px}.project-page .project-overview,.project-page .secondary-overview{padding:8px 0 32px}.project-page .details-content{padding:32px 0 0}}
+@media(max-width:620px){:root{--fs-h1:clamp(36px,10.4vw,46px);--fs-h2:32px;--section-space:64px;--row-indent:0px}.hero{padding-block:48px 40px}.project-summary{padding:24px 12px;margin-inline:-12px}.project-overview{display:block;padding:0 0 32px}.project-expanded .project-overview>.project-index{display:none}.project-explore{padding-bottom:28px}.contact-section{padding-block:64px}.project-page .project-overview,.project-page .secondary-overview{padding:8px 0 32px}.project-page .details-content{padding:32px 0 0}}
 @media(prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}}
 @media print{.js .reveal{opacity:1;transform:none}.contact-section{background:white}}
 
