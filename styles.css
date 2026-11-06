@@ -44,8 +44,8 @@ h1{font-size:var(--fs-h1);line-height:1.08;margin:22px 0 24px;font-weight:600;le
 .text-link:hover{color:var(--accent);border-bottom-color:var(--accent)}
 .text-link span[aria-hidden]{font-size:17px;line-height:1}
 .hero-research{position:relative;padding:18px 0 0}
-.hero-research::before{content:"";position:absolute;inset:-6px -16px 50px 25px;border-radius:var(--radius);background:#f3f1ea;transform:rotate(3deg);z-index:-1}
-.research-window{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 18px 45px -32px #2b2a2722}
+.hero-research::before{content:"";position:absolute;inset:-6px -16px 50px 25px;border-radius:var(--radius);background:#ece6da;transform:rotate(3deg);z-index:-1}
+.research-window{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 18px 45px -32px #3b342a66}
 .window-heading{padding:18px 23px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e6e2d8;background:#fcfbf8;gap:10px}
 .small-label{font-size:var(--fs-meta);color:var(--body)}
 .window-mark{font:500 var(--fs-tag) var(--font-mono);color:var(--muted)}
@@ -294,15 +294,8 @@ a,.text-link,.project-row-title,.project-explore,.desktop-nav a,.contact-links>a
 .status-dot{background:var(--clay)}
 .button-dark{border-radius:8px}
 
-/* Hero: the figure in a thin frame, caption beneath. */
+/* Hero: keep the original tilted research card, in warm colours. */
 .hero{padding-block:112px 104px}
-.hero-research{padding-top:0}
-.hero-research::before{display:none}
-.research-window{background:none;border:0;border-radius:0;box-shadow:none;overflow:visible}
-.hero-figure-link{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:20px 16px 14px}
-.hero-figure-link:hover{opacity:1;border-color:#d6d1c4}
-.window-caption{background:none;border:0;padding:24px 0 0}
-.figure-note{text-align:left;margin-top:14px}
 
 /* Sections share one paper and are divided by hairlines. */
 .section{padding-block:var(--section-space)}
