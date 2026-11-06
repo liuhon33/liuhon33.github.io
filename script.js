@@ -90,3 +90,21 @@ window.addEventListener('beforeprint', () => {
   printState.forEach(([element]) => { element.open = true; });
 });
 window.addEventListener('afterprint', () => printState.forEach(([element, open]) => { element.open = open; }));
+
+// Sections fade in once as they enter the viewport. Skipped when reduced motion is preferred.
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      revealObserver.unobserve(entry.target);
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+  document.querySelectorAll('main > section:not(.hero), main > .foundation-strip').forEach((element) => {
+    const rect = element.getBoundingClientRect();
+    if (rect.top < window.innerHeight) return; // already on screen: never hide it
+    element.classList.add('reveal');
+    revealObserver.observe(element);
+  });
+  window.addEventListener('beforeprint', () => document.querySelectorAll('.reveal').forEach((element) => element.classList.add('is-visible')));
+}
